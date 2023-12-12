@@ -51,7 +51,7 @@ actor QuakeClient {
     
     private let downloader: any HTTPDataDownloader
     
-    init(downloader: HTTPDataDownloader) {
+    init(downloader: any HTTPDataDownloader = URLSession.shared) {
         self.downloader = downloader
     }
     
